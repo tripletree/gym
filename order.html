@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>北京邮电大学体育馆</title>
+<meta content="欢迎光临北京邮电大学体育馆官方网站。查询场馆信息，在线预订场馆，办卡须知" name="description">
+<meta content="北京邮电大学体育馆、场馆预订" name="keywords">
+<link rel="stylesheet" type="text/css" href="css/basic.css">
+<link rel="stylesheet" type="text/css" href="orderstyle/skin.css">
+<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+   <div id="top"><a id="logo" href="index.html">
+      <img src="img/logo5.jpg"  width="330" height="80"/>
+   </a>
+     <ul>
+            <li class="nav01"><a href="contact.html">联系我们</a>
+          </li>
+           
+           <li class="nav02"><a href="member.html">成为会员</a></li>
+           
+           <li class="nav03">
+             <a class="top_nav" id="li_first" href="login.html" target="_self">场馆预订</a>
+           </li>
+           
+            <li class="nav04">
+             <a class="top_nav" id="li_first" href="info.html" target="_self">场馆信息</a>
+           </li>
+           
+           <li class="nav05">
+             <a class="top_nav" id="li_first" href="news.html" target="_self">场馆动态</a>
+           </li>   
+      </ul>
+ 
+</div>
+<div id="band2"></div>
+<div class="conWrap">
+    <div id="menu_w" class="menu_w">
+        <div id="menu_left" class="menu_left"><ul id="titleul">
+      <li><a href="index.html">首页</a></li>
+       <li><img src="img/liststyle.png" ></li>
+      <li id="lasttitle">场馆预订</li>
+      </ul>
+        </div>
+        <div class="menu_r">
+          <ul>
+            <li>会员：</li>
+            <li id="login_out"><a href="/" class="n_out">退出</a></li>
+         <!--这里返回用户名-->   
+            <li id="username">张三</li>
+            
+            
+          </ul>
+        </div>
+    </div>
+<div class="order_w">
+  <div class="select_date">      
+      <div align="right"><input type="date" value="日期" /></div>             
+  </div>
+  <div class="search_box">
+    <div class="select"><span class="text">请选择场馆</span>
+         <div class="list" style="display:none;">
+			  <ul>
+				    <li>羽毛馆球</li>
+				    <li>乒乓球馆</li>
+			  </ul>
+		 </div>
+	</div>
+            
+    <div class="select"><span class="text">请选择时间段</span>
+		 <div class="list" style="display:none;">
+			  <ul>
+				  <li>上午</li>
+				  <li>下午</li>
+			  </ul>
+		 </div>
+	</div>
+    <div class="login_btn"><a href="order_book.html" target="ordermenu">查询</a></div> 
+    <div class="login_btn"><a href="/">重置</a></div>
+        
+  </div>
+  <!--iframe框返回预订列表order_book.html 预订成功页面order_finish.html-->
+  <div class="enter_w">
+          <iframe id="ordermain" scrolling="auto" frameborder="0" src="order_welcome.html" name="ordermenu">
+          </iframe>
+          </div>
+          
+  
+    
+    
+    
+</div> 
+<div id="foot"></div>
+     
+
+</body>
+</html>
+<script>
+$(function(){
+	/*selectBox*/
+	$(".search_box .select").hover( function () {
+		$(this).addClass("select_over");
+	},function () {
+		$(this).removeClass("select_over");
+	}).on('click',function(){
+		var _this = $(this),
+			_bthis = $(this).find(".list");
+		if ( _this.attr('isopen') ) {
+			_bthis.slideUp(200 , function(){
+				_this.removeAttr('isopen');
+			});			
+		} else {
+			_bthis.slideDown(200,function(){
+				_this.attr('isopen',"1");
+			});	
+		}
+	}).on('mouseleave',function(){
+		var _thisa = $(this).find(".list"),
+			_this = $(this);
+		_thisa.hide();
+		_this.removeAttr('isopen');
+	}),$(this).find(".list li").hover( function (){
+		$(this).addClass("sel");		
+	},function (){
+		$(this).removeClass("sel");	
+	}).on('click',function(){
+		var _this = $(this).html();
+		var _thisText = $(this).closest(".select").find(".text");
+		_thisText.html(_this);
+	})
+	$(".search_box .button input").click(function(){
+		var endinfo= "";
+		$(".search_box .select .text").each(function(i){
+			endinfo=endinfo+(i+1)+":"+$(this).html()+";\n";
+		});						
+		alert(endinfo);						
+	});
+	});
+</script>
