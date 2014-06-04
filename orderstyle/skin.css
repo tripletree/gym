@@ -1,0 +1,80 @@
+/*orderhtmlstyle*/
+/*select*/
+ul, li { padding: 0px; margin: 0px; list-style: none; }
+.search_box {
+	height:76px;
+   width:670px;
+   float:right;
+   padding-top:20px;
+   
+/*   padding-left:30px;*/
+   
+}
+.select { background: url(../img/select.png) no-repeat 0 0; cursor: pointer; width: 200px; height: 38px; position: relative; 
+  float: left; 
+  margin: 4px 5px; 
+  vertical-align: top; z-index: 2; }
+.select_over { background-position: 0 -48px; }
+.select .text { font: 14px/38px arial; display: block; width: 140px; height: 38px; overflow: hidden; padding: 0 10px; color: #666; }
+.select .list { background: #eee; border: solid 1px #ccc; position: absolute; width: 100%; }
+.select .list li { padding: 2px 10px; font: 12px/24px arial; }
+.select .list li.sel { background: #ddd; }
+
+
+.login_btn { 
+  /* padding: 0px; height: 38px; vertical-align: middle;
+   position:relative;*/
+   padding: 0 20px; 
+   vertical-align: middle;
+   float: left;
+   
+   }
+.login_btn a { 
+    display: block;
+    float: left;
+	margin-right:0px; 
+	border: solid 1px #ccc; 
+	background:#617798; 
+	color: #fff; 
+	font: bold 14px/1.125 "微软雅黑", "Microsoft YaHei", Arial; 
+	padding: 14px 25px; 
+	text-decoration: none; 
+	border-radius: 5px; 
+	box-shadow: 0 0 5px rgba(0,0,0,0.2); 
+	}
+.login_btn a:hover { background: #f5f5f5; color: #666;}
+/*order_book.html*/
+.orderbook{
+	height: 320px;
+	width: 850px;
+	position: absolute;
+	left: 5px;
+	top: 6px;
+	margin-top:20px;
+}
+.orderbook a {
+	font:  14px/1.125 "微软雅黑", "Microsoft YaHei", Arial;
+	alignment-adjust:central;
+
+}
+#orderbooktitle a {
+	font: bold 18px/1.125 "微软雅黑", "Microsoft YaHei", Arial;
+	color:#737373;
+}
+/*order_finish*/
+#orderfinishtitle {
+	margin-top:30px;
+	margin-left:130px;
+	margin-bottom:30px;
+	font: bold 18px/1.125 "微软雅黑", "Microsoft YaHei", Arial;
+	color:#737373;	
+}
+#oderfinishbutton{
+	float:right;
+	margin-right:130px;
+	margin-top:20px;
+}
+
+	
+
+	

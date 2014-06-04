@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>正在预订</title>
+<!--link rel="stylesheet" type="text/css" href="css/basic.css"-->
+<link rel="stylesheet" type="text/css" href="orderstyle/skin.css">
+</head>
+
+<body>
+<!--根据必选项来改变表格-->
+<div class="orderbook">
+   <table height="250px" width="600" border="1"  bordercolor="#808080" align="center" >
+     <tr height="40px" bgcolor="#617798" >
+       <td width="100" align="center">场馆</td>
+       <td width="190" align="center" >时间段</td>
+       <td width="82" align="center">剩余</td>
+       <td width="100" align="center">预订</td>
+     </tr>
+     <tr>
+     <!--根据选择场馆类型返回-->
+       <td rowspan="4" align="center" valign="middle" id="orderbooktitle" bgcolor="#D1D1D1" ><a target="/">羽毛球</a></td>
+       <td align="center" bgcolor="#ECECE3"><a target="/">8:00 - 9:00</a></td>
+      <!--根据剩余场数返回剩余信息-->
+       <td align="center"><a target="/">1</a></td>
+       <td align="center"><input type="checkbox"/></td>
+      </tr>
+      <tr>
+       <td align="center" bgcolor="#ECECE3"><a target="/">9:00 - 10:00</a></td>
+       <td align="center"><a target="/">2</a></td>
+       <td align="center"><input type="checkbox"/></td>
+      </tr>
+      <tr>
+       <td align="center" bgcolor="#ECECE3"><a target="/">10:00 - 11:00</a></td>
+       <td align="center"><a target="/">1</a></td>
+       <td align="center"><input type="checkbox"/></td>
+      </tr>
+      <tr>
+       <td align="center" bgcolor="#ECECE3"><a target="/">11:00 - 12:00</a></td>
+       <td align="center"><a target="/">2</a></td>
+       <td align="center"><input type="checkbox"/></td>
+      </tr>
+   </table>
+   <p>
+   <table height="40px" width="700" border="0" align="center">
+     <tr>
+       <td width="250"></td>
+       <td class="login_btn"><a href="order_finish.html" target="ordermenu">预订</a></td>
+       <td class="login_btn"><a href="/">重置</a></td>
+     </tr>
+   </table>
+   
+   </div>
+</body>
+</html>
